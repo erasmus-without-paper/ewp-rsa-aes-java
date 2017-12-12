@@ -2,12 +2,12 @@ package eu.erasmuswithoutpaper.rsaaes;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-
-import javax.xml.bind.DatatypeConverter;
+import java.util.Base64;
 
 class Utils {
 
   private static final char[] HEX_CHARS = "0123456789abcdef".toCharArray();
+  private static final byte[] LF = new byte[] { 0x0A };
 
   static String addLineBreaks(String str, int lineLength) {
     StringBuilder sb = new StringBuilder();
@@ -27,11 +27,11 @@ class Utils {
   }
 
   static byte[] b64decode(String encoded) {
-    return DatatypeConverter.parseBase64Binary(encoded);
+    return Base64.getMimeDecoder().decode(encoded);
   }
 
   static String b64encode(byte[] data) {
-    return addLineBreaks(DatatypeConverter.printBase64Binary(data), 76);
+    return Base64.getMimeEncoder(76, LF).encodeToString(data);
   }
 
   static byte[] getBinarySha256Fingerprint(byte[] data) {
