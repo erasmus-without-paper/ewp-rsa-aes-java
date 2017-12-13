@@ -1,7 +1,7 @@
 ewp-rsa-aes-java Library
 ========================
 
-Java implementation of an [`ewp-rsa-aes128gcm` Encryption][encr-spec].
+Java implementation of the [`ewp-rsa-aes128gcm` encryption][encr-spec].
 
 
 Installation and Documentation
@@ -14,14 +14,14 @@ include a proper reference in your build's dependencies. Click the image below
 for the artifact details.
 
 [
-    ![Maven Central](https://maven-badges.herokuapp.com/maven-central/eu.erasmuswithoutpaper/ewp-rsa-aes-java/badge.svg)
-](https://maven-badges.herokuapp.com/maven-central/eu.erasmuswithoutpaper/ewp-rsa-aes-java)
+    ![Maven Central](https://maven-badges.herokuapp.com/maven-central/eu.erasmuswithoutpaper/ewp-rsa-aes/badge.svg)
+](https://maven-badges.herokuapp.com/maven-central/eu.erasmuswithoutpaper/ewp-rsa-aes)
 
 You can also browse the project's Javadocs here:
 
 [
-    ![Javadocs](http://javadoc.io/badge/eu.erasmuswithoutpaper/ewp-rsa-aes-java.svg?color=red)
-](http://javadoc.io/doc/eu.erasmuswithoutpaper/ewp-rsa-aes-java)
+    ![Javadocs](http://javadoc.io/badge/eu.erasmuswithoutpaper/ewp-rsa-aes.svg?color=red)
+](http://javadoc.io/doc/eu.erasmuswithoutpaper/ewp-rsa-aes)
 
 **Upgrading?** Check out the [changelog (release notes)](CHANGELOG.md).
 
