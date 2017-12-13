@@ -7,12 +7,21 @@ Java implementation of an [`ewp-rsa-aes128gcm` Encryption][encr-spec].
 Installation and Documentation
 ------------------------------
 
-This library is in beta. We don't deploy to *Maven Central Repository* yet (but
-we are planning to, once the [`ewp-rsa-aes128gcm` document][encr-spec] becomes
-stable). If you want to test it now, then you'll need to `mvn install` it
-locally.
-
 Requires **Java 8 SE**.
+
+Releases are deployed to *Maven Central Repository*. You'll simply need to
+include a proper reference in your build's dependencies. Click the image below
+for the artifact details.
+
+[
+    ![Maven Central](https://maven-badges.herokuapp.com/maven-central/eu.erasmuswithoutpaper/ewp-rsa-aes-java/badge.svg)
+](https://maven-badges.herokuapp.com/maven-central/eu.erasmuswithoutpaper/ewp-rsa-aes-java)
+
+You can also browse the project's Javadocs here:
+
+[
+    ![Javadocs](http://javadoc.io/badge/eu.erasmuswithoutpaper/ewp-rsa-aes-java.svg?color=red)
+](http://javadoc.io/doc/eu.erasmuswithoutpaper/ewp-rsa-aes-java)
 
 **Upgrading?** Check out the [changelog (release notes)](CHANGELOG.md).
 
