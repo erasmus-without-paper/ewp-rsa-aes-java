@@ -131,6 +131,15 @@ public class EwpRsaAes128GcmTest extends TestBase {
     assertThat(Utils.b64encode(details.recipientPublicKeySha256))
         .isEqualTo("A1ATd09ZbhiHNEvaigZGIDB1lZI1XbP1HISY/9Cxit0=");
 
+    // Also test the corresponding static method
+
+    assertThat(EwpRsaAes128GcmDecoder.extractRecipientPublicKeySha256(ewpRsaAesBody))
+        .isEqualTo(details.recipientPublicKeySha256);
+    assertThat(EwpRsaAes128GcmDecoder.extractRecipientPublicKeySha256Base64(ewpRsaAesBody))
+        .isEqualTo("A1ATd09ZbhiHNEvaigZGIDB1lZI1XbP1HISY/9Cxit0=");
+    assertThat(EwpRsaAes128GcmDecoder.extractRecipientPublicKeySha256Hex(ewpRsaAesBody))
+        .isEqualTo("035013774f596e1887344bda8a06462030759592355db3f51c8498ffd0b18add");
+
     // aesKey
 
     assertThat(details.encryptedAesKeyLength).isEqualTo(256); // 2048 bits (size of the RSA key)

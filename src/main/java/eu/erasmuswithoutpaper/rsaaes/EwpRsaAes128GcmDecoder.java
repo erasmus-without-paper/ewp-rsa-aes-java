@@ -57,7 +57,7 @@ public class EwpRsaAes128GcmDecoder {
   public static byte[] extractRecipientPublicKeySha256(byte[] ewpRsaAesBody)
       throws BadEwpRsaAesBody {
     try {
-      return Arrays.copyOf(ewpRsaAesBody, 16);
+      return Arrays.copyOf(ewpRsaAesBody, 32);
     } catch (BufferUnderflowException e) {
       throw new BadEwpRsaAesBody(e);
     }
@@ -70,7 +70,7 @@ public class EwpRsaAes128GcmDecoder {
    * @return Base64-encoded SHA-256 fingerprint of the payload's recipient's RSA public key.
    */
   public static String extractRecipientPublicKeySha256Base64(byte[] ewpRsaAesBody) {
-    return Utils.b64encode(Arrays.copyOf(ewpRsaAesBody, 16));
+    return Utils.b64encode(Arrays.copyOf(ewpRsaAesBody, 32));
   }
 
   /**
@@ -80,7 +80,7 @@ public class EwpRsaAes128GcmDecoder {
    * @return Hex-encoded SHA-256 fingerprint of the payload's recipient's RSA public key.
    */
   public static String extractRecipientPublicKeySha256Hex(byte[] ewpRsaAesBody) {
-    return Utils.hexEncode(Arrays.copyOf(ewpRsaAesBody, 16));
+    return Utils.hexEncode(Arrays.copyOf(ewpRsaAesBody, 32));
   }
 
   protected final RSAPublicKey recipientPublicKey;
